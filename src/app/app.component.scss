@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.site-title {
+  color: '#f8b739';
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 72rem;
+  margin: 0 auto;
+  background-color: #d8d8d2;
+}
