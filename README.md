@@ -9,6 +9,17 @@ Versões utilizadas na construção do projeto:
 `NodeJs: v12.14.0`
 `Angular CLI: 9.1.12`
 
+### Instalação via Docker
+
+Na pasta raiz do projeto execute o comando para criar a imagem docker
+`docker build . -t pokemon`
+
+Após o término do asso anterior, execute o comando abaixo para rodar a imagem
+`docker run -p 3000:80 pokemon`
+
+O projeto deve estar acessível atavés de
+http://localhost:3000/
+
 ### Instalaçao LINUX
 
 Instalar NodeJS
