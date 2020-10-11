@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  pokemon: 'https://pokeapi.co/api/v2/pokemon/',
-  generations: 'https://pokeapi.co/api/v2/generation/',
+  pokemon: 'https://pokeapi.co/api/v2/pokemon',
+  generations: 'https://pokeapi.co/api/v2/generation',
 };
 
 /*

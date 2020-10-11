@@ -1,16 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-modal-list',
-  templateUrl: './moal-list.component.html',
+  templateUrl: './modal-list.component.html',
   styleUrls: ['./modal-list.component.scss'],
 })
 export class ModalListComponent implements OnInit {
-  @Input() data: any;
-  @Input() label: string;
-
-  constructor() { }
+  constructor(
+    public ref: DynamicDialogRef,
+    public config: DynamicDialogConfig) { }
 
   ngOnInit() { }
+
+  isArray(obj: any ) {
+    return Array.isArray(obj);
+  }
 
 }

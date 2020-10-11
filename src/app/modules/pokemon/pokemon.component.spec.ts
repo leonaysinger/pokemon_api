@@ -1,9 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { PokemonComponent } from './pokemon.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 
-
-describe('FileComponent', () => {
+describe('PokemonComponent', () => {
   let component: PokemonComponent;
   let fixture: ComponentFixture<PokemonComponent>;
 
@@ -13,6 +13,7 @@ describe('FileComponent', () => {
         PokemonComponent,
       ],
       imports: [
+        HttpClientModule,
         RouterTestingModule
       ]
     })

@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 
 
-describe('FileComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 

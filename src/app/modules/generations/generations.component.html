@@ -1,9 +1,17 @@
 <app-top-menu></app-top-menu>
 <div class="col-xs-12">
-    <p-table [value]="data">
+  <p-messages [(value)]="helpMsg"></p-messages>
+</div>
+<div class="col-xs-12">
+    <p-table 
+      [columns]="cols" 
+      [value]="data" 
+      resizableColumns="true" 
+      columnResizeMode="expand"
+      [autoLayout]="true">
       <ng-template pTemplate="header">
           <tr>
-              <th *ngFor="let col of cols">
+              <th *ngFor="let col of cols" class="th-header-text">
                   {{col.header}}
               </th>
           </tr>
@@ -15,32 +23,47 @@
                 <button 
                   type="button" 
                   class="btn ability-button"
-                  (click)="callModalList(generation.ability)">
+                  (click)="callModalList('Habilidades', generation.abilities)">
                     Habilidades
                 </button>
               </td>
               <td>
-                <button type="button" class="btn region-button">
+                <button 
+                  type="button" 
+                  class="btn region-button"
+                  (click)="callModalList('Região', generation.main_region)">
                     Região
                 </button>
               </td>
               <td>
-                <button type="button" class="btn move-button">
+                <button 
+                  type="button" 
+                  class="btn move-button"
+                  (click)="callModalList('Movimentos', generation.moves)">
                     Movimentos
                 </button>
               </td>
               <td>
-                <button type="button" class="btn specie-button">
+                <button 
+                  type="button" 
+                  class="btn specie-button"
+                  (click)="callModalList('Espécies', generation.pokemon_species)">
                     Espécies
                 </button>
               </td>
               <td>
-                <button type="button" class="btn type-button">
+                <button 
+                  type="button" 
+                  class="btn type-button"
+                  (click)="callModalList('Tipos', generation.types)">
                     Tipos   
                 </button>
               </td>
               <td>
-                <button type="button" class="btn version-group-button">
+                <button 
+                  type="button" 
+                  class="btn version-group-button"
+                  (click)="callModalList('Versões', generation.version_groups)">
                     Versões   
                 </button>
               </td>

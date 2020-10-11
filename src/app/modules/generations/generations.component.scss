@@ -33,3 +33,21 @@
   background-color: #000000;
   border-color: #000000;
 }
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+@media screen and (max-width: 64em) {
+  :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    top: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .th-header-text {
+    font-size: 10px;
+  }
+}

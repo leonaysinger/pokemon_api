@@ -1,0 +1,14 @@
+<div *ngIf="config.data && config.data.items && isArray(config.data.items)">
+  <ul class="list-group">
+    <li *ngFor = "let item of config.data.items"
+      class="modal-li">
+      {{item.name}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="config.data && config.data.items && !isArray(config.data.items)">
+  <ul class="list-group">
+    <li class="modal-li">{{config.data.items.name}}</li>
+  </ul>
+</div>

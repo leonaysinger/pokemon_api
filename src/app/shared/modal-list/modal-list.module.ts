@@ -1,9 +1,16 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ModalListComponent } from './modal-list.component';
 import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [ModalListComponent],
-  imports: [],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    DynamicDialogModule,
+  ],
   exports: [
     ModalListComponent
   ]

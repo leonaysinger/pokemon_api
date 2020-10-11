@@ -1,0 +1,47 @@
+<app-top-menu></app-top-menu>
+<div class="col-xs-12">
+  <p-table 
+    #dt 
+    [columns]="cols" 
+    [value]="tableData" 
+    [autoLayout]="true"
+    [lazy]="true"
+    [rows]="limit"
+    (onLazyLoad)="loadPokemonTable($event)"
+    [totalRecords]="totalRecords"
+    [paginator]="true">
+    
+    <!-- Table caption -->
+    <ng-template pTemplate="caption">
+      <div class="table-header">
+        <p>Total ({{totalRecords}})</p>
+        <span class="mr-2">Limite linhas:</span>
+        <i class="fa fa-search" style="margin:4px 8px 4px 0"></i>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols; trackBy: trackByFn">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-pokemon>
+      <tr>
+        <td>
+          <img src="{{pokemon.sprite}}" alt="">
+        </td>
+        <td>{{pokemon.name | titlecase}}</td>
+        <td>
+          {{pokemon.base_experience}}
+        </td>
+        <td>
+          {{pokemon.height}}
+        </td>
+        <td>
+          {{pokemon.weight}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

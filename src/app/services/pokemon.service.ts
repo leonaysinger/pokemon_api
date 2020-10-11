@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -9,15 +9,19 @@ import { Observable } from 'rxjs';
 export class PokemonService {
   constructor(private http: HttpClient) {}
 
-  listPokemons(options): Observable<any> {
-    return this.http.get(`${environment.pokemon}`, options);
+  listPokemons(h): Observable<any> {
+    const ht = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.get(`${environment.pokemon}`,
+     { headers: ht, params: h});
   }
 
   listGenerations(options): Observable<any> {
     return this.http.get(`${environment.generations}`, options);
   }
 
-  getGeneration(url, options): Observable<any> {
-    return this.http.get(url, options);
+  getGenericUrl(url): Observable<any> {
+    return this.http.get(url);
   }
 }
