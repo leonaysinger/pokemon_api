@@ -13,7 +13,6 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 })
 export class GenerationsComponent implements OnInit, OnDestroy {
   pokemon: Subscription;
-  count = 0;
   data: Array<any>;
   cols: Array<Column>;
   ref: DynamicDialogRef;
@@ -25,7 +24,7 @@ export class GenerationsComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    const infoMessage = 'Para informações detalhadas, selecione na tabela';
+    const infoMessage = 'Selecione um item das gerações para mais informações';
     this.helpMsg.push(
       {
         severity: 'info',
@@ -46,7 +45,6 @@ export class GenerationsComponent implements OnInit, OnDestroy {
 
     this.pokemon = this.pokemonService.listGenerations({}).subscribe(
       response => {
-        this.count = response.count;
         this.data = response.results;
 
         if (this.data.length > 0) {

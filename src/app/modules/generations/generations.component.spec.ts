@@ -117,7 +117,6 @@ describe('GenerationsComponent', () => {
 
   it('should create table', () => {
     fixture.whenStable().then(() => {
-      expect(component.count).toBe(2);
       const native = fixture.nativeElement;
       const tableHeaders = native.querySelectorAll('th');
       expect(tableHeaders.length).toBe(7);

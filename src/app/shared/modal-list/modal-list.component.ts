@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-modal-list',
