@@ -57,8 +57,6 @@ export class PokemonComponent implements OnInit, OnDestroy {
     });
   }
 
-  callModalList(data) { }
-
   trackByFn(index) {
     return index;
   }

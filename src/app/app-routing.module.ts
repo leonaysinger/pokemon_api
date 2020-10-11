@@ -1,4 +1,4 @@
-import { HomeComponent } from './modules/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { PokemonComponent } from './modules/pokemon/pokemon.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

@@ -1,27 +1,52 @@
 # Pokemon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.11.
+Projeto realizado com angular com o objetivo de listar algumas informações referentes a
+dados do Pokemon disponibilizados por uma api pública (https://pokeapi.co).
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Versões utilizadas na construção do projeto:
+`NodeJs: v12.14.0`
+`Angular CLI: 9.1.12`
 
-## Code scaffolding
+### Instalaçao LINUX
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instalar NodeJS
+`sudo apt-get install nodejs`
+
+Instalar NPM
+`sudo apt install npm`
+
+Instalar angular-cli
+`npm install -g @angular/cli`
+
+Após a instalação, no diretório principal do projeto, é ncessário instalar os pacotes executnado o seguinte comando
+`npm install`
+
+Após a instalação do pacote, para rodar em ambiente local, basta executar o seguinte passo
+`ng serve`
+
+Agora o projeto está disponível em
+`http://localhost:4200/`
+
+## Organização do projeto
+
+Neste projeto foram utilizados componentes de UI customizáveis através da biblioteca PrimeNg (https://www.primefaces.org/primeng/).
+
+A seguir uma lista dos principais diretórios e suas funções.
+
+Home -> Modulo que contém o componente da tela inicial do projeto
+Modules -> Diretório que apresenta todos os módulos utilizados no sistema
+Interface -> Diretórios que contém as interfaces de objetos utilizados no sistema
+Services -> Contém todos os serviços utilizados no projeto
+Shared -> Contém módulos ou componentes que são compartilhados com outros componentes do sistemas.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+O comando ng-build constrói o projeto e todos seus artefatos são colocados no diretório `dist`.
+O comando `ng build --prod` realiza a build em produção,
+substituindo o arquivo `environment.ts` pelo `environment.prod.ts`.
 
-## Running unit tests
+## Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para realizar todos os testes criados, na pasta raiz do projeto digite o comando `ng test`;

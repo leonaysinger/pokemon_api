@@ -6,8 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-menu.component.scss'],
 })
 export class TopMenuComponent implements OnInit {
-  constructor() { }
+  selectedMenu: string;
+
+  constructor() {
+    this.selectedMenu = 'Home';
+  }
 
   ngOnInit() { }
+
+  changeMenu(menu: string){
+    this.selectedMenu = menu;
+  }
 
 }

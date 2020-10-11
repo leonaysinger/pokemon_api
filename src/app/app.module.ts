@@ -1,6 +1,6 @@
+import { HomeModule } from './home/home.module';
 import { GenerationsModule } from './modules/generations/generations.module';
 import { TopMenuModule } from './shared/top-menu/top-menu.module';
-import { HomeModule } from './modules/home/home.module';
 import { PokemonModule } from './modules/pokemon/pokemon.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

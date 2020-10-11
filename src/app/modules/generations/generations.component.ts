@@ -13,7 +13,7 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 })
 export class GenerationsComponent implements OnInit, OnDestroy {
   pokemon$: Subscription;
-  count: number;
+  count = 0;
   data: Array<any>;
   cols: Array<Column>;
   ref: DynamicDialogRef;

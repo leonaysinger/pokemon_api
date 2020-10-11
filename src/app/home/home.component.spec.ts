@@ -1,3 +1,5 @@
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
@@ -13,6 +15,8 @@ describe('HomeComponent', () => {
         HomeComponent,
       ],
       imports: [
+        BrowserAnimationsModule,
+        CommonModule,
         RouterTestingModule
       ]
     })
