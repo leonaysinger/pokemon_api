@@ -1,6 +1,6 @@
 # Pokemon
 
-Projeto realizado com angular com o objetivo de listar algumas informações referentes a
+O objetivo do projeto é listar algumas informações referentes a
 dados do Pokemon disponibilizados por uma api pública (https://pokeapi.co).
 
 ## Instalação
@@ -14,7 +14,7 @@ Versões utilizadas na construção do projeto:
 Na pasta raiz do projeto execute o comando para criar a imagem docker
 `docker build . -t pokemon`
 
-Após o término do asso anterior, execute o comando abaixo para rodar a imagem
+Após o término do passo anterior, execute o comando abaixo para rodar a imagem
 `docker run -p 3000:80 pokemon`
 
 O projeto deve estar acessível atavés de
@@ -46,11 +46,11 @@ Neste projeto foram utilizados componentes de UI customizáveis através da bibl
 
 A seguir uma lista dos principais diretórios e suas funções.
 
-Home -> Modulo que contém o componente da tela inicial do projeto
-Modules -> Diretório que apresenta todos os módulos utilizados no sistema
-Interface -> Diretórios que contém as interfaces de objetos utilizados no sistema
-Services -> Contém todos os serviços utilizados no projeto
-Shared -> Contém módulos ou componentes que são compartilhados com outros componentes do sistemas.
+Home: Modulo que contém o componente da tela inicial do projeto <br>
+Modules: Contém todos os módulos utilizados no sistema <br>
+Interface: Contém as interfaces de objetos utilizados no sistema <br>
+Services: Contém todos os serviços utilizados no projeto <br>
+Shared: Contém módulos ou componentes que são compartilhados com outros componentes do sistemas.<br>
 
 ## Build
 
