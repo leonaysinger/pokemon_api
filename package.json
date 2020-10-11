@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~9.1.12",
     "@angular/platform-browser-dynamic": "~9.1.12",
     "@angular/router": "~9.1.12",
+    "@ngx-loading-bar/core": "^5.1.0",
+    "@ngx-loading-bar/http-client": "^5.1.0",
     "bootstrap": "^4.5.2",
     "primeicons": "^4.0.0",
     "primeng": "^10.0.3",

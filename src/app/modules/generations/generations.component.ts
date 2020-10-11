@@ -12,7 +12,7 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
   providers: [DialogService]
 })
 export class GenerationsComponent implements OnInit, OnDestroy {
-  pokemon$: Subscription;
+  pokemon: Subscription;
   count = 0;
   data: Array<any>;
   cols: Array<Column>;
@@ -44,7 +44,7 @@ export class GenerationsComponent implements OnInit, OnDestroy {
       { header: 'Versões' },
     ];
 
-    this.pokemon$ = this.pokemonService.listGenerations({}).subscribe(
+    this.pokemon = this.pokemonService.listGenerations({}).subscribe(
       response => {
         this.count = response.count;
         this.data = response.results;
@@ -68,14 +68,14 @@ export class GenerationsComponent implements OnInit, OnDestroy {
         label: dataKey
       },
       header: title,
-      width: '50%',
+      width: '55%',
       contentStyle: {'max-height': '500px', overflow: 'auto'},
       baseZIndex: 10000
   });
   }
 
   ngOnDestroy() {
-    this.pokemon$.unsubscribe();
+    this.pokemon.unsubscribe();
     if (this.ref) {
         this.ref.close();
     }

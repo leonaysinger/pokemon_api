@@ -12,10 +12,16 @@ export class TopMenuComponent implements OnInit {
     this.selectedMenu = 'Home';
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.selectedMenu = sessionStorage.getItem('menuSelected');
+    console.log(this.selectedMenu);
+    if (!this.selectedMenu) {
+      this.selectedMenu = 'Home';
+    }
+  }
 
   changeMenu(menu: string){
-    this.selectedMenu = menu;
+    sessionStorage.setItem('menuSelected', menu);
   }
 
 }

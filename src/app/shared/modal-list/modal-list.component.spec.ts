@@ -1,7 +1,12 @@
+import { MessagesModule } from 'primeng/messages';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { ListboxModule } from 'primeng/listbox';
 import { DynamicDialogConfig, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalListComponent } from './modal-list.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, async, TestBed, tick } from '@angular/core/testing';
+import { MessageModule } from 'primeng/message';
 
 
 describe('ModalListComponent', () => {
@@ -41,7 +46,12 @@ describe('ModalListComponent', () => {
         ModalListComponent,
       ],
       imports: [
+        BrowserModule,
+        CommonModule,
         DynamicDialogModule,
+        ListboxModule,
+        MessagesModule,
+        MessageModule,
         RouterTestingModule
       ],
       providers: [
@@ -65,11 +75,11 @@ describe('ModalListComponent', () => {
 
   it('should create three items on list', () => {
     const native = fixture.nativeElement;
-    const listItems = native.querySelectorAll('.modal-li');
+    const listItems = native.querySelectorAll('.p-listbox-list-wrapper li');
     expect(listItems.length).toBe(3);
-    expect(listItems[0].textContent).toBe(' teste1 ');
-    expect(listItems[1].textContent).toBe(' teste2 ');
-    expect(listItems[2].textContent).toBe(' teste3 ');
+    expect(listItems[0].textContent).toBe('teste1');
+    expect(listItems[1].textContent).toBe('teste2');
+    expect(listItems[2].textContent).toBe('teste3');
   });
 
   it('should create one item on ul', () => {

@@ -1,3 +1,5 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { TopMenuComponent } from './top-menu.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
@@ -13,6 +15,8 @@ describe('TopMenuComponent', () => {
         TopMenuComponent,
       ],
       imports: [
+        BrowserModule,
+        CommonModule,
         RouterTestingModule
       ]
     })

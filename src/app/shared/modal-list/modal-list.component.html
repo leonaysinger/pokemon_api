@@ -1,13 +1,20 @@
-<div *ngIf="config.data && config.data.items && isArray(config.data.items)">
-  <ul class="list-group">
-    <li *ngFor = "let item of config.data.items"
-      class="modal-li">
-      {{item.name}}
-    </li>
-  </ul>
+<div *ngIf="!hasData()"
+  class="col-xs-12">
+    <p-messages [(value)]="errorMessage"></p-messages>
 </div>
 
-<div *ngIf="config.data && config.data.items && !isArray(config.data.items)">
+<div *ngIf="hasData() && dataIsArray(config.data.items)" 
+  class="list-div">
+    <p-listbox 
+      [options]="config.data.items"  
+      [filter]="true" 
+      [listStyle]="{'max-height':'250px'}" 
+      [style]="{'width':'100%'}"
+      optionLabel="name">
+    </p-listbox>
+</div>
+
+<div *ngIf="hasData() !dataIsArray(config.data.items)">
   <ul class="list-group">
     <li class="modal-li">{{config.data.items.name}}</li>
   </ul>
